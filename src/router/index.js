@@ -1,0 +1,28 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+
+Vue.use(Router)
+
+import Home from "@/components/home.vue";
+import Film from "@/components/film.vue";
+//film 子路由
+import Comingsoon from "@/components/comingsoon.vue";
+import Nowplaying from "@/components/nowplaying.vue";
+
+export default new Router({
+    routes: [
+        { path: '/', name: 'HelloWorld', component: HelloWorld},
+        { path: '/home', component: Home},
+        { 
+            path: '/film',
+            component: Film,
+            redirect: "/film/now-playing",
+            children:[
+                {path: "coming-soon", component: Comingsoon,},
+                {path: 'now-playing', component: Nowplaying,},
+            ]
+        }
+        
+    ]
+})
