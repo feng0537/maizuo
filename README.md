@@ -1,5 +1,5 @@
 # maizuo
-222121   20190218
+222  20190218
 > A Vue.js project
 
 ## Build Setup
