@@ -2,16 +2,17 @@
 	<div class="home">
 		home11111111
 		<div class="swiper">
-		    333333
-            <mt-swipe :auto="2000">
+            <mt-swipe :auto="4000">
                 <mt-swipe-item v-for="data in swiper" :key="data.bannerId">
-                    <div class="box"><img src="data.imgUrl" alt="" /></div>
+                    <img :src=data.imgUrl alt="" />
                 </mt-swipe-item>
             </mt-swipe>		    
 		</div>
-<mt-button type="default">default</mt-button>
-<mt-button type="primary">primary</mt-button>
-<mt-button type="danger">danger</mt-button>		
+        <ul class="nav-sub">
+            <router-link tag="span" active-class="active" to="/home/now-playing">正在热映</router-link>
+            <router-link tag="span" active-class="active" to="/home/coming-soon">即将上映</router-link>
+        </ul>
+        <router-view/>
 	</div>
 </template>
 
@@ -36,6 +37,29 @@
 </script>
 
 <style>
-    .swiper{width: 100%;height:200px; background: #ccc;}
-    .box{width: 100%;height: 200px;color: red;}
+    .swiper{
+        width: 100%;
+        height:210px; 
+        background: #ccc;
+    }
+    .swiper img{width: 100%;}
+    .box{
+        width: 100%;
+        height: 200px;
+        color: red;
+    }
+    .nav-sub{
+        width:100%;
+        background: #F0F8FF;
+        overflow: hidden;
+        text-align: center;
+    }
+    .nav-sub span{
+        float:left;
+        width:50%;
+        display: inline-block;
+        line-height: 30px;
+    }
+    .active{color: red;}
+    
 </style>

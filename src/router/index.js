@@ -13,7 +13,15 @@ import Nowplaying from "@/components/nowplaying.vue";
 export default new Router({
     routes: [
         { path: '/', name: 'HelloWorld', component: HelloWorld},
-        { path: '/home', component: Home},
+        { 
+            path: '/home', 
+            component: Home,
+            redirect: "/home/now-playing",
+            children:[
+                {path: "coming-soon", component: Comingsoon,},
+                {path: 'now-playing', component: Nowplaying,},
+            ]
+        },
         { 
             path: '/film',
             component: Film,

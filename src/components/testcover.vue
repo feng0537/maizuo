@@ -16,6 +16,6 @@
 	</script>
 
 	<style>
-		ul{background: aliceblue;width: 100%;}
-		li{text-align: center;display: inline-block;}
+		.router ul{background: aliceblue;width: 100%;}
+		.router li{text-align: center;display: inline-block;}
 	</style>
