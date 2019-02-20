@@ -21,7 +21,6 @@ export default new Router({
             children:[
                 {path: "coming-soon", component: Comingsoon,},
                 {path: 'now-playing', component: Nowplaying,},
-
             ]
         },
         { 
@@ -33,7 +32,7 @@ export default new Router({
                 {path: 'now-playing', component: Nowplaying,},
             ]
         },
-        { path: '/detail/:id', component: FilmDetail}
+        { path: '/film/:id', component: FilmDetail}
         
         
     ]

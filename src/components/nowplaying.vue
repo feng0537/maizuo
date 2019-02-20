@@ -1,6 +1,9 @@
 <template>
 	<div id="nowplaying">
-        <ul style="padding-left: 15px;">
+        <ul style="padding-left: 15px;"
+            v-infinite-scroll="loadMore"
+            infinite-scroll-disabled="loading"
+            infinite-scroll-distance="5">            
             <li v-for="data in datalist" :key="data.filmId">
                 <div class="film" @click="handleFilm(data.filmId)">
                     <div class="film-img" style="float: left;">
@@ -12,7 +15,7 @@
                             <span style="background: #CCCCCC;color: #fff;">{{data.filmType.name}}</span>
                         </p>
                         <p>
-                                                       观众评分<span style="color: #FF0000;">{{data.grade}}</span>
+                                                        观众评分 <span style="color: #FF0000;">{{data.grade}}</span>
                         </p>
                         <p>主演：</p>
                         <p>{{data.nation}} | {{data.runtime}}分钟</p>
@@ -28,32 +31,43 @@
 
 <script>
     import axios from "axios";
-    import router from "../router/index.js"
+    import router from "../router/index.js";
     export default{
         data(){
             return {
                 datalist: [],
+                loading:true
+                
             }
         },
         mounted(){
             axios.get("https://www.easy-mock.com/mock/5c6a6556e5014c6a2c90fe50/api/nowplaying1").then(res=>{
-                console.log(222);
-                console.log(res);
                 this.datalist = res.data.data.films;
-                console.log(this.datalist)
-            })        
+                var list = JSON.stringify(this.datalist);
+                sessionStorage.setItem('nowplayingList',list);
+            })                 
         },
         methods: {
             handleFilm(id){
-                alert(123);
-                router.push(`/detail/$(id)`);
-                
-            }
+                router.push(`/film/${id}`);
+            },
+            loadMore() {
+                this.loading = true;
+                console.log('滚动加载');
+                axios.get("https://www.easy-mock.com/mock/5c6a6556e5014c6a2c90fe50/api/nowplaying2").then(res=>{
+                    this.datalist = res.data.data.films;
+                })                      
+                this.loading = false;
+            }            
         }
     }
 </script>
 
 <style>
+    /*#nowplaying ul{
+        max-height: 100vh;
+        overflow-y: auto;
+    }*/
     #nowplaying li{
         overflow: hidden;
         padding:15px 15px 15px 0px;
