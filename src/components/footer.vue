@@ -19,6 +19,7 @@
         width: 100%;
         height: 49px;
         overflow: hidden;
+        background:#F0F8FF;
     }
     .nav-bar li{
         width:25%;

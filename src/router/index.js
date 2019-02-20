@@ -9,6 +9,7 @@ import Film from "@/components/film.vue";
 //film 子路由
 import Comingsoon from "@/components/comingsoon.vue";
 import Nowplaying from "@/components/nowplaying.vue";
+import FilmDetail from "@/components/filmDetail.vue";
 
 export default new Router({
     routes: [
@@ -20,6 +21,7 @@ export default new Router({
             children:[
                 {path: "coming-soon", component: Comingsoon,},
                 {path: 'now-playing', component: Nowplaying,},
+
             ]
         },
         { 
@@ -30,7 +32,9 @@ export default new Router({
                 {path: "coming-soon", component: Comingsoon,},
                 {path: 'now-playing', component: Nowplaying,},
             ]
-        }
+        },
+        { path: '/detail/:id', component: FilmDetail}
+        
         
     ]
 })
