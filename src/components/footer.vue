@@ -2,9 +2,9 @@
     <div class="nav-bar">
         <ul>
             <router-link tag="li" active-class="active" to="/home">电影</router-link>
-            <router-link tag="li" active-class="active" to="/film/now-playing">影院</router-link>
-            <router-link tag="li" active-class="active" to="/film/now-playing">9.9拼团</router-link>
-            <router-link tag="li" active-class="active" to="/film/now-playing">我的</router-link>
+            <router-link tag="li" active-class="active" to="/movie">影院</router-link>
+            <router-link tag="li" active-class="active" to="/test">测试</router-link>
+            <router-link tag="li" active-class="active" to="/me">我的</router-link>
         </ul>
     </div>
 </template>

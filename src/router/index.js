@@ -11,6 +11,10 @@ import Comingsoon from "@/components/comingsoon.vue";
 import Nowplaying from "@/components/nowplaying.vue";
 import FilmDetail from "@/components/filmDetail.vue";
 
+import Movie from "@/components/movie.vue";
+import Test from "@/components/test.vue";
+import Me from "@/components/me.vue";
+
 export default new Router({
     routes: [
         { path: '/', name: 'HelloWorld', component: HelloWorld},
@@ -32,7 +36,10 @@ export default new Router({
                 {path: 'now-playing', component: Nowplaying,},
             ]
         },
-        { path: '/film/:id', component: FilmDetail}
+        { path: '/film/:id', component: FilmDetail},
+        { path: '/movie', component: Movie},
+        { path: '/test', component: Test},
+        { path: '/me', component: Me},
         
         
     ]
