@@ -1,6 +1,8 @@
 
 20190325星期一
-
+  基础组件的全局注册 在 src/main.js
+  vue 路由传参 params 与 query两种方式的区别
+  要让子组件使用父组件的数据，需要通过子组件的 props 选项 	http://www.cnblogs.com/xiaohuochai/p/7388866.html
 
 
 
