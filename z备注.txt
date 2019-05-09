@@ -1,4 +1,15 @@
 
+
+20190509 星期四
+ 需要完成
+   组件通讯   components/demo   https://www.cnblogs.com/amunamuna/p/8872979.html
+   自定义指令
+   vuex
+
+3.非父子组件间通信  创建事件中心
+简单情况下我们可以通过使用一个空的Vue实例作为中央事件总线，（这里也可以使用app实例，而不需要新建一个空Vue实例）
+
+
 20190325星期一
   基础组件的全局注册 在 src/main.js
   vue 路由传参 params 与 query两种方式的区别
