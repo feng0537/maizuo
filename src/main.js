@@ -11,6 +11,10 @@ Vue.use(Mint)
 
 Vue.config.productionTip = false
 
+//通过使用一个空的Vue实例作为中央事件总线 进行非父子通信
+let bus = new Vue()
+Vue.prototype.bus = bus
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

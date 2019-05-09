@@ -15,6 +15,9 @@ import Movie from "@/components/movie.vue";
 import Test from "@/components/test.vue";
 import Me from "@/components/me.vue";
 
+//demo 父子组件传递
+import Demo from "@/components/demo/parent.vue";
+
 export default new Router({
     routes: [
         { path: '/', name: 'HelloWorld', component: HelloWorld},
@@ -40,6 +43,8 @@ export default new Router({
         { path: '/movie', component: Movie},
         { path: '/test', component: Test},
         { path: '/me', component: Me},
+        
+        { path: '/demo', component: Demo},
         
         
     ]

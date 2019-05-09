@@ -1,18 +1,20 @@
 <template>
     <div id="test">
-        <h3 style="text-align: center;">test222222222</h3>
+        <h3 style="text-align: center;">测试</h3>
+        <div>
+        	<ul>
+        		<router-link tag="li" to="/demo">父子组件的传值</router-link>        		
+        	</ul>
+        	
+        </div>     
         <hr />
-        {{message}}
 		<button @click="reverseMessage">逆转消息</button>
-        <childComponent :my-message="data1"></childComponent>
-        <childComponent :my-message="data2"></childComponent>
-        
+
     </div>
     
 </template>
 
 <script>
-	import childComponent from "./testChild.vue";	
     export default{
         data(){
             return {
@@ -25,12 +27,9 @@
         methods:{
             reverseMessage: function () {
                 this.message = this.message.split('').reverse().join('')
-            }            
-            
+            },
         },
-        components:{
-        	childComponent,
-        },
+        components:{ },
         mounted(){
         },
     }
