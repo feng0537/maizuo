@@ -40,18 +40,18 @@
 		mounted(){
 			//非父子组件传值 $on 发出
 			//var _this = this;
-			this.bus.$on('toElseModule', function(msg){
-				this.elseMessage = msg;	
+//			Bus.$on('toElseModule', function(msg){
+//				this.elseMessage = msg;	
 //				this.$set(this.elseMessage,msg)
-				console.log(msg)
-				console.log(this.elseMessage)
-			})
+//				console.log(msg)
+//				console.log(this.elseMessage)
+//			})
 		},				
 		methods:{
 			alertMes: function(){
-				this.temp_message = '123';
-				alert(this.message)	
 				alert(this.temp_message)	
+				alert(this.elseMessage)	
+				
 			},
 			sendMsgToParent:function(){
 				//向父组件传值  

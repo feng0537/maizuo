@@ -7,6 +7,7 @@
 </template>
 
 <script>
+	import Bus from './../../bus' 
 	export default{
 		data(){
 			return {
@@ -17,7 +18,7 @@
 			//https://segmentfault.com/a/1190000010530600
             //非父子组件传值 $emit 发出
             changeTitle:function(){
-            	this.bus.$emit('toElseModule','来自其他组件的值')
+            	Bus.$emit('toElseModule','来自其他组件的值')
             }			
 		}
 

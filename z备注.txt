@@ -1,5 +1,10 @@
 
 
+20190510 星期五
+vuex教程 1111
+https://segmentfault.com/a/1190000014798001
+
+
 20190509 星期四
  需要完成
    组件通讯   components/demo   https://www.cnblogs.com/amunamuna/p/8872979.html

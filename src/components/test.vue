@@ -1,9 +1,10 @@
 <template>
     <div id="test">
         <h3 style="text-align: center;">测试</h3>
-        <div>
+        <div class="nav">
         	<ul>
-        		<router-link tag="li" to="/demo">父子组件的传值</router-link>        		
+        		<router-link tag="li" to="/demo">组件传值</router-link>        		
+        		<router-link tag="li" to="/shop">购物车vuex</router-link>        		
         	</ul>
         	
         </div>     
@@ -36,5 +37,16 @@
     
 </script>
 
-<style>
+<style scoped>
+	.nav{
+		padding: 5px;
+	}
+	.nav ul{
+		overflow: hidden;
+	}
+	ul li{
+		float: left;
+		background: #CCCCCC;
+		margin-right: 10px;
+	}
 </style>
