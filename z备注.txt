@@ -1,32 +1,31 @@
-20190917���ڶ� 1322
-
-2222
-20190510 ������
-vuex�̳� 1111
+20190917星期二1322
+主分支
+修改20190510星期五线上
+vuex教程1111
 https://segmentfault.com/a/1190000014798001
 
 
-20190509 ������
- ��Ҫ���
-   ���ͨѶ   components/demo   https://www.cnblogs.com/amunamuna/p/8872979.html
-   �Զ���ָ��
+20190509 星期四
+ 需要完成
+   组件通讯   components/demo   https://www.cnblogs.com/amunamuna/p/8872979.html
+   自定义指令
    vuex
 
-3.�Ǹ��������ͨ��  �����¼�����
-����������ǿ���ͨ��ʹ��һ���յ�Vueʵ����Ϊ�����¼����ߣ�������Ҳ����ʹ��appʵ����������Ҫ�½�һ����Vueʵ����
+3.非父子组件间通信  创建事件中心
+简单情况下我们可以通过使用一个空的Vue实例作为中央事件总线，（这里也可以使用app实例，而不需要新建一个空Vue实例）
 
 
-20190325����һ
-  ���������ȫ��ע�� �� src/main.js
-  vue ·�ɴ��� params �� query���ַ�ʽ������
-  Ҫ�������ʹ�ø���������ݣ���Ҫͨ��������� props ѡ�� 	http://www.cnblogs.com/xiaohuochai/p/7388866.html
+20190325星期一
+  基础组件的全局注册 在 src/main.js
+  vue 路由传参 params 与 query两种方式的区别
+  要让子组件使用父组件的数据，需要通过子组件的 props 选项 	http://www.cnblogs.com/xiaohuochai/p/7388866.html
 
 
 
-20190304 ����һ
-  scss��ʹ��
-  rem��ʹ��
-  ״̬����
+20190304 星期一
+  scss的使用
+  rem的使用
+  状态管理
 
 
 
